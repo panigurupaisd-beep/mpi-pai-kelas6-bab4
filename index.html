@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>Hukum Halal dan Haram – PAI Kelas 6</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eaf6fd;--card:#fff;--ink:#1d2b3a;--blue:#1b6fb3;--green:#1f8a5b;--cta:#ffb703;--cta-ink:#3b2a00;--org:#fb8500;--ok:#1f8a5b;--bad:#c1392b;--line:#bcdcf0}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f2233;--card:#17324a;--ink:#f1f7fb;--blue:#8ccbff;--green:#6fdcaa;--line:#2c5675;--ok:#6fdcaa;--bad:#ff9a8d}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{font:18px/1.65 Nunito,system-ui,sans-serif;color:var(--ink);background:var(--bg);touch-action:manipulation;overflow-x:hidden}
+h1,h2,h3{font-family:'Baloo 2',Nunito,sans-serif;line-height:1.25;margin:.2em 0;color:var(--blue)}
+h1{font-size:40px}h2{font-size:32px}h3{font-size:24px}
+#nav{display:none;position:sticky;top:0;z-index:5;background:var(--card);border-bottom:3px solid var(--line);overflow-x:auto;gap:4px;padding:6px}
+#nav button{flex:1 0 auto;min-width:64px;min-height:60px;border:0;border-radius:14px;background:transparent;color:var(--ink);font:700 13px Nunito,sans-serif;cursor:pointer;transition:.25s ease}
+#nav button span{display:block;font-size:24px}
+#nav button.on{background:var(--blue);color:#fff}
+main{max-width:960px;margin:auto;padding:16px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:20px;margin:12px 0}
+.btn{min-height:60px;min-width:60px;padding:10px 26px;border:0;border-radius:16px;background:var(--cta);color:var(--cta-ink);font:800 20px 'Baloo 2',sans-serif;cursor:pointer;box-shadow:0 4px 0 #c98700;transition:.2s ease}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #c98700}
+.btn.alt{background:var(--blue);color:#fff;box-shadow:0 4px 0 #0f4d80}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.cover{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;background:radial-gradient(circle at 20% 15%,#fff8 0 12%,transparent 13%),linear-gradient(180deg,#bfe6fb,#eaf6fd 70%);border-radius:28px;padding:20px}
+.cover h1{font-size:clamp(28px,6vw,48px);color:#0f4d80}
+.pill{background:#0f4d80;color:#fff;border-radius:999px;padding:4px 18px;font-weight:800}
+.opt{display:flex;gap:10px;align-items:center;width:100%;min-height:60px;text-align:left;margin:8px 0;padding:10px 16px;border:3px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);font:700 18px Nunito,sans-serif;cursor:pointer;transition:.25s ease}
+.opt:hover{border-color:var(--blue)}
+.opt.ok{border-color:var(--ok);background:#dff5ea;color:#0d4a30}
+.opt.bad{border-color:var(--bad);background:#fde5e1;color:#7a1d12;animation:sh .35s}
+.opt:disabled{cursor:default}
+.bar{height:16px;background:var(--line);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--green);transition:width .4s ease}
+.fb{padding:12px 16px;border-radius:14px;margin:10px 0;font-weight:700}
+.fb.ok{background:#dff5ea;color:#0d4a30;animation:bn .4s}.fb.bad{background:#fff1d6;color:#5c3b00}
+.chip{display:inline-block;min-height:60px;padding:12px 18px;margin:6px;border:3px solid var(--blue);border-radius:16px;background:var(--card);font-weight:800;cursor:grab;user-select:none;transition:.2s ease}
+.chip.sel{background:var(--cta);color:var(--cta-ink);border-color:var(--org)}
+.bucket{min-height:140px;border:3px dashed var(--blue);border-radius:18px;padding:10px;text-align:center;cursor:pointer;transition:.2s ease}
+.bucket.shake{animation:sh .35s;border-color:var(--bad)}
+.bucket .chip{cursor:default;border-color:var(--ok);background:#dff5ea;color:#0d4a30;min-height:48px}
+.big{font-size:72px;line-height:1}
+.hal{background:var(--green);color:#fff;box-shadow:0 4px 0 #0f5c3a}.har{background:#c1392b;color:#fff;box-shadow:0 4px 0 #7f2219}
+.stars{font-size:36px}
+.mas{display:flex;gap:12px;align-items:center}.mas svg{width:96px;flex:none}
+.bub{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:12px 16px;flex:1}
+.foot{display:flex;gap:12px;justify-content:space-between;margin-top:14px}
+textarea{width:100%;min-height:90px;font:18px Nunito,sans-serif;padding:10px;border-radius:12px;border:2px solid var(--line);background:var(--card);color:var(--ink)}
+.emo{font-size:40px;min-width:64px;min-height:64px;border:3px solid var(--line);border-radius:16px;background:var(--card);cursor:pointer}.emo.on{border-color:var(--org);background:#fff1d6}
+@keyframes sh{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes bn{50%{transform:scale(1.04)}}
+@media(max-width:600px){body{font-size:16px}h1{font-size:30px}h2{font-size:24px}h3{font-size:20px}.big{font-size:56px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<nav id="nav" aria-label="Menu utama"></nav>
+<main id="app"></main>
+<script>
+const $=s=>document.querySelector(s),sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+let S={pts:0,best:0,seen:{}};
+try{Object.assign(S,JSON.parse(localStorage.getItem('hh6')||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem('hh6',JSON.stringify(S))}catch(e){}};
+function mascot(m='happy'){const M={happy:'M38 60 Q50 72 62 60',think:'M42 64 H58',wow:'M50 62 a6 7 0 1 0 .1 0',proud:'M36 58 Q50 76 64 58'}[m];
+return `<svg viewBox="0 0 100 112" role="img" aria-label="Maskot Kak Hilal"><ellipse cx="50" cy="104" rx="30" ry="12" fill="#1f8a5b"/><circle cx="50" cy="56" r="32" fill="#ffd8a8"/><path d="M20 42 Q50 4 80 42 Z" fill="#1d2b3a"/><rect x="18" y="40" width="64" height="7" rx="3" fill="#ffb703"/><circle cx="38" cy="54" r="4" fill="#1d2b3a"/><circle cx="62" cy="54" r="4" fill="#1d2b3a"/><path d="${M}" fill="${m=='wow'?'#a33':'none'}" stroke="#1d2b3a" stroke-width="3" stroke-linecap="round"/>${m=='proud'?'<circle cx="30" cy="64" r="5" fill="#ff9a8d" opacity=".7"/><circle cx="70" cy="64" r="5" fill="#ff9a8d" opacity=".7"/>':''}</svg>`}
+const say=(m,t)=>`<div class="mas">${mascot(m)}<div class="bub">${t}</div></div>`;
+const scale=`<svg viewBox="0 0 300 170" style="width:min(420px,90%)" role="img" aria-label="Timbangan halal dan haram"><circle cx="150" cy="90" r="70" fill="#a8dcc0"/><rect x="144" y="30" width="12" height="110" rx="5" fill="#ffb703"/><rect x="100" y="140" width="100" height="12" rx="6" fill="#ffb703"/><rect x="40" y="46" width="220" height="8" rx="4" fill="#ffb703"/><path d="M50 54 L28 104 M50 54 L84 104 M250 54 L216 104 M250 54 L272 104" stroke="#8a6500" stroke-width="3"/><path d="M20 104 H92 Q82 128 56 128 Q30 128 20 104Z" fill="#ffb703"/><path d="M208 104 H280 Q270 128 244 128 Q218 128 208 104Z" fill="#ffb703"/><rect x="28" y="84" width="56" height="22" rx="4" fill="#1f8a5b"/><text x="56" y="100" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">HALAL</text><rect x="216" y="84" width="56" height="22" rx="4" fill="#c1392b"/><text x="244" y="100" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">HARAM</text></svg>`;
+const NAV=[['home','🏠','Beranda'],['materi','📖','Materi'],['akt','🎯','Aktivitas'],['game','🎮','Game'],['lat','📝','Latihan'],['kuis','❓','Kuis'],['hasil','🏆','Hasil'],['ref','💭','Refleksi'],['help','📋','Petunjuk']];
+let cur='cover',timer=null;
+$('#nav').innerHTML=NAV.map(n=>`<button data-k="${n[0]}" onclick="go('${n[0]}')"><span>${n[1]}</span>${n[2]}</button>`).join('');
+function go(k){clearInterval(timer);cur=k;$('#nav').style.display=k=='cover'?'none':'flex';document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.k==k));
+({cover,home,materi,akt,game,lat,kuis,hasil,ref,help})[k]();window.scrollTo(0,0)}
+function cover(){$('#app').innerHTML=`<section class="cover"><span class="pill">Pendidikan Agama Islam • Kelas 6 (Fase C)</span><h1>Bab 4<br>Hukum Halal dan Haram</h1>${scale}${say('happy','Assalamu’alaikum! Aku Kak Hilal. Yuk, kita cari tahu mana yang <b>halal</b> dan mana yang <b>haram</b>!')}<button class="btn" style="font-size:28px;padding:14px 48px" onclick="go('home')">▶ MULAI</button><p><b>Dibuat oleh M. Ripani, S.Pd</b></p></section>`}
+function home(){$('#app').innerHTML=`<h2>Selamat Datang! 🌟</h2>${say('happy','Pertanyaan pemantik: <b>Membuang sampah ke sungai</b> itu halal atau haram, ya? Ayo belajar dulu, lalu kita jawab bersama!')}<div class="card"><b>Tujuan belajar:</b><ol><li>Menjelaskan definisi halal dan haram</li><li>Menyebutkan dasar hukum halal dan haram</li><li>Menjelaskan sebab-sebab halal dan haram</li><li>Menerapkannya dalam kehidupan sehari-hari</li></ol><b>Poin kamu: ⭐ ${S.pts}</b> &nbsp; <b>Skor kuis terbaik: ${S.best}</b></div><div class="grid">${NAV.slice(1).map(n=>`<button class="btn ${S.seen[n[0]]?'alt':''}" onclick="go('${n[0]}')">${n[1]} ${n[2]}${S.seen[n[0]]?' ✓':''}</button>`).join('')}</div>`}
+const SL=[
+['🌊','Pertanyaan Pemantik','mm','think','Kamu melihat orang membuang sampah ke sungai. Menurutmu, <b>halal atau haram</b>? Simpan jawabanmu, nanti kita periksa lagi di akhir!'],
+['✅','A. Halal','Definisi','happy','<b>Halal</b> = boleh, dibolehkan, dibenarkan.<br>Segala sesuatu atau kegiatan yang <b>diizinkan syariat Islam</b> untuk digunakan atau dilakukan.<br>Contoh: makan nasi, ikan segar, mencari rezeki dengan jujur.'],
+['⛔','A. Haram','Definisi','wow','<b>Haram</b> = dilarang, tidak diizinkan.<br>Segala sesuatu atau kegiatan yang <b>dilarang syariat Islam</b>, membuat pelakunya berdosa dan menjurus pada keburukan.<br>Contoh: mencuri, berjudi, makan babi.'],
+['📖','B. Dasar 1: Al-Qur’an','Dasar Hukum','proud','Al-Qur’an adalah <b>sumber hukum utama</b>. Yang dihalalkan di dalamnya pasti halal, yang diharamkan pasti haram.<br>Penetapannya adalah hak Allah Yang Maha Tahu. Dalil: Q.S. al-Maidah/5: 87.'],
+['📚','B. Dasar 2: Al-Hadis','Dasar Hukum','happy','Al-Hadis (al-Sunnah) adalah perkataan, perbuatan, dan persetujuan <b>Nabi Muhammad saw.</b><br>Fungsinya: menjelaskan, menerangkan, dan merinci hukum dalam Al-Qur’an. Ia sumber hukum <b>kedua</b>.'],
+['🕌','B. Dasar 3: Ijtihad','Dasar Hukum','think','<b>Ijtihad</b> = mengerahkan segala kemampuan berpikir untuk menemukan hukum syariat.<br>Hanya <b>ulama bersyarat mujtahid</b> yang boleh. Di Indonesia, <b>Komisi Fatwa MUI</b> memberi fatwa kehalalan makanan, minuman, obat, dan lainnya.'],
+['🐖','C. Sebab 1: Zat Asal','Sebab','wow','Haram karena <b>bendanya sendiri</b>: bangkai, darah, babi (Q.S. al-Baqarah/2: 173).<br>Setetes benda haram yang tercampur membuat semuanya haram. Allah melarang karena <b>sayang kepada kita</b>.'],
+['🎲','C. Sebab 2: Sifat Asal','Sebab','think','Haram karena <b>sifat perbuatannya</b> buruk: jahat, judi, syirik (Q.S. al-Baqarah/2: 219).<br>Walau niat dan hasilnya tampak bagus, tetap haram.'],
+['🍳','C. Sebab 3: Proses','Sebab','happy','Cara membuat dan cara mendapatkan menentukan halal atau haram.<br>Contoh: gurame dibakar di bekas panggang daging babi jadi haram. Uang dari mencuri, korupsi, atau judi juga haram.<br>Tapi zat haram <b>tidak bisa menjadi halal</b> walau prosesnya bagus.'],
+['🤲','D. Penerapan','Penerapan','proud','<b>Sikap:</b> yakin hukum Allah untuk kebaikan makhluk.<br><b>Perilaku:</b> hindari perbuatan buruk, termasuk membuang sampah sembarangan dan memubazirkan makanan.<br><b>Konsumsi:</b> pilih produk berlabel halal (BPJPH, berdasarkan fatwa MUI). Wajib memilih yang halal!']];
+let mi=0;
+function materi(){S.seen.materi=1;save();const s=SL[mi];$('#app').innerHTML=`<div class="bar"><i style="width:${(mi+1)/SL.length*100}%"></i></div><p><b>${mi+1} / ${SL.length}</b></p><div class="card"><div class="row"><span class="big">${s[0]}</span><h2>${s[1]}</h2></div>${say(s[3],s[4])}</div><div class="foot"><button class="btn alt" onclick="mi=Math.max(0,mi-1);materi()" ${mi?'':'disabled'}>◀ Kembali</button><button class="btn" onclick="${mi<SL.length-1?'mi++;materi()':'go(\'akt\')'}">${mi<SL.length-1?'Lanjut ▶':'Ke Aktivitas 🎯'}</button></div>`}
+const AI=[['Babi','z'],['Bangkai','z'],['Darah','z'],['Judi','s'],['Syirik','s'],['Berbuat jahat','s'],['Ikan dibakar di bekas panggang babi','p'],['Uang hasil mencuri','p']];
+let sel=null,done=0,aq;
+function akt(){S.seen.akt=1;done=0;sel=null;aq=sh(AI);$('#app').innerHTML=`<h2>🎯 Aktivitas: Kelompokkan Sebab</h2><p>Pilih kartu (ketuk atau seret), lalu letakkan di kotak <b>sebab</b> yang tepat.</p><div class="card" id="pool">${aq.map((a,i)=>`<span class="chip" draggable="true" data-i="${i}" id="c${i}" tabindex="0">${a[0]}</span>`).join('')}</div><div class="grid">${[['z','🐖 Zat Asal'],['s','🎲 Sifat Asal'],['p','🍳 Proses']].map(b=>`<div class="bucket" data-b="${b[0]}"><h3>${b[1]}</h3></div>`).join('')}</div><div id="afb"></div>`;
+document.querySelectorAll('.chip').forEach(c=>{c.onclick=()=>{document.querySelectorAll('.chip.sel').forEach(x=>x.classList.remove('sel'));sel=c.dataset.i;c.classList.add('sel')};c.ondragstart=e=>{sel=c.dataset.i;e.dataTransfer.setData('text','x')}});
+document.querySelectorAll('.bucket').forEach(b=>{b.onclick=()=>drop(b);b.ondragover=e=>e.preventDefault();b.ondrop=e=>{e.preventDefault();drop(b)}})}
+function drop(b){if(sel===null){$('#afb').innerHTML='<div class="fb bad">Pilih kartu dulu ya 😊</div>';return}
+const a=aq[sel],c=$('#c'+sel);if(a[1]==b.dataset.b){c.className='chip';c.draggable=false;c.onclick=null;b.appendChild(c);S.pts+=10;save();sel=null;done++;$('#afb').innerHTML='<div class="fb ok">✓ Benar! +10 poin</div>';
+if(done==aq.length)$('#afb').innerHTML=`<div class="fb ok">🎉 Hebat! Semua tepat. Zat = bendanya, Sifat = perbuatannya, Proses = cara membuat/mendapatkan.</div><button class="btn" onclick="go('game')">Main Game 🎮</button>`}
+else{b.classList.add('shake');setTimeout(()=>b.classList.remove('shake'),400);const h={z:'Petunjuk: apakah ini sebuah benda yang haram sejak asalnya?',s:'Petunjuk: apakah ini perbuatan yang sifatnya buruk?',p:'Petunjuk: lihat cara membuat atau cara mendapatkannya.'}[a[1]];$('#afb').innerHTML=`<div class="fb bad">✗ Belum tepat. ${h} Coba lagi!</div>`}}
+const GI=[['Makan ikan segar yang dimasak bersih',1],['Minum khamar',0],['Uang hasil mencuri',0],['Berdagang dengan jujur',1],['Bermain judi',0],['Makan daging babi',0],['Makan buah-buahan segar',1],['Membeli produk berlabel halal resmi',1],['Korupsi',0],['Membuang sampah ke sungai',0],['Makan daging hewan yang mati tertabrak',0],['Minum air putih',1]];
+function game(){S.seen.game=1;$('#app').innerHTML=`<h2>🎮 Game Kilat: Halal atau Haram?</h2><div class="card" style="text-align:center"><p>Ketuk jawaban secepatnya dalam <b>45 detik</b>. Benar +10, salah −5.</p>${say('happy','Siap? Fokus ya, jangan terburu-buru asal pilih!')}<br><button class="btn" onclick="gstart()">▶ Mulai</button></div>`}
+function gstart(){let t=45,sc=0,q=sh(GI),i=0;const draw=()=>{const c=q[i%q.length];$('#app').innerHTML=`<div class="row"><b>⏱ <span id="tm">${t}</span> dtk</b><b>⭐ <span id="sc">${sc}</span></b></div><div class="bar"><i style="width:${t/45*100}%"></i></div><div class="card" style="text-align:center"><h2 style="color:var(--ink)">${c[0]}</h2><div class="row"><button class="btn hal" style="min-width:150px" onclick="ans(1)">✓ HALAL</button><button class="btn har" style="min-width:150px" onclick="ans(0)">✗ HARAM</button></div><div id="gf" class="fb" style="visibility:hidden">.</div></div>`};
+window.ans=v=>{const c=q[i%q.length],ok=v==c[1];sc+=ok?10:-5;i++;draw();const f=$('#gf');f.style.visibility='visible';f.className='fb '+(ok?'ok':'bad');f.textContent=ok?'✓ Benar!':'✗ Kurang tepat. Ingat: periksa zat, sifat, dan prosesnya.'};
+draw();timer=setInterval(()=>{t--;if(t<=0){clearInterval(timer);S.pts+=Math.max(0,sc);save();$('#app').innerHTML=`<div class="card" style="text-align:center"><h2>Waktu Habis! ⏰</h2><div class="stars">${sc>=90?'⭐⭐⭐':sc>=50?'⭐⭐':'⭐'}</div><p>Skor game: <b>${sc}</b></p>${say(sc>=50?'proud':'happy',sc>=50?'Luar biasa, kamu cepat dan tepat!':'Tetap semangat! Baca materi lagi lalu coba main lagi.')}<br><button class="btn" onclick="game()">Main Lagi</button> <button class="btn alt" onclick="go('lat')">Ke Latihan 📝</button></div>`}else{$('#tm').textContent=t;$('.bar i').style.width=t/45*100+'%'}},1000)}
+const LB=[
+{q:'Secara sederhana, halal artinya ….',o:['boleh atau dibolehkan','dilarang','berdosa','wajib dibeli'],h:'Ingat: halal adalah lawan dari dilarang.',e:'Halal berarti boleh, dibolehkan, atau dibenarkan.',t:'Definisi'},
+{q:'Dasar hukum halal dan haram yang ketiga adalah ….',o:['Ijtihad (fatwa ulama)','Al-Qur’an','Al-Hadis','Kebiasaan orang'],h:'Urutannya: Al-Qur’an, Al-Hadis, lalu hasil berpikir para ulama.',e:'Dasar ketiga adalah ijtihad ulama yang berbentuk fatwa.',t:'Dasar Hukum'},
+{q:'Kamu makan nasi sampai habis dan tidak membuang-buang makanan. Sikap ini sesuai dengan ….',o:['menghindari perbuatan mubazir','mengikuti teman','takut dimarahi','lomba makan'],h:'Membuang makanan disebut memubazirkan.',e:'Menghabiskan makanan berarti menghindari mubazir.',t:'Penerapan'},
+{q:'Daging sapi yang mati tertabrak tetap haram walau dimasak sangat bersih karena ….',o:['zat asalnya haram (bangkai)','juru masaknya tidak berdoa','harganya mahal','dimasak di restoran'],h:'Apakah bendanya sendiri sudah haram?',e:'Bangkai haram karena zat asalnya, apa pun prosesnya.',t:'Sebab'},
+{q:'Siapa yang mengeluarkan fatwa halal di Indonesia?',o:['Majelis Ulama Indonesia (MUI)','Pedagang','Tukang masak','Penjual keliling'],h:'Lembaganya berisi para ulama.',e:'Fatwa halal dikeluarkan oleh Komisi Fatwa MUI.',t:'Dasar Hukum'}];
+const KB=[
+{q:'Halal adalah segala sesuatu yang ….',o:['diizinkan syariat Islam','dilarang syariat Islam','dibuat di pabrik','disukai banyak orang'],h:'Halal = diizinkan.',e:'Halal adalah segala sesuatu atau kegiatan yang diizinkan syariat Islam.',t:'Definisi'},
+{q:'Segala sesuatu yang membuat pelakunya berdosa dan menjurus pada keburukan disebut ….',o:['haram','halal','mubah','sunnah'],h:'Lawan dari halal.',e:'Itu definisi haram.',t:'Definisi'},
+{q:'Sumber hukum utama halal dan haram adalah ….',o:['Al-Qur’an','Fatwa ulama','Undang-undang','Pendapat guru'],h:'Ia kitab suci umat Islam.',e:'Al-Qur’an adalah sumber hukum utama.',t:'Dasar Hukum'},
+{q:'Al-Hadis berfungsi untuk ….',o:['menjelaskan dan merinci hukum Al-Qur’an','menggantikan Al-Qur’an','menghapus hukum Allah','menjadi dongeng sebelum tidur'],h:'Hadis adalah penjelas.',e:'Hadis menjelaskan, menerangkan, dan merinci Al-Qur’an.',t:'Dasar Hukum'},
+{q:'Yang boleh berijtihad dan memberi fatwa adalah ….',o:['ulama yang memenuhi syarat mujtahid','semua orang','anak-anak','penjual makanan'],h:'Perlu ilmu yang sangat luas.',e:'Hanya ulama bersyarat mujtahid.',t:'Dasar Hukum'},
+{q:'Babi diharamkan karena ….',o:['zat asalnya','prosesnya','harganya','tempat jualnya'],h:'Bendanya sendiri.',e:'Babi, darah, dan bangkai haram karena zat asalnya.',t:'Sebab'},
+{q:'Judi haram karena ….',o:['sifat perbuatannya buruk','bendanya haram','proses pengolahannya','tidak ada yang bermain'],h:'Judi adalah perbuatan, bukan benda.',e:'Judi bersifat buruk sehingga haram, walau hasilnya terlihat bagus.',t:'Sebab'},
+{q:'Ikan gurame dibakar di bekas panggang daging babi. Hukumnya ….',o:['haram karena prosesnya','halal karena ikannya halal','halal karena enak','makruh karena murah'],h:'Ikan halal, tetapi bagaimana cara memasaknya?',e:'Proses yang tercampur zat haram membuatnya haram.',t:'Sebab'},
+{q:'Anak membeli kupon Rp2.000 lalu diundi dan mendapat buku tulis. Buku itu haram karena ….',o:['diperoleh dengan cara judi','harganya mahal','kuponnya murah','bukunya baru'],h:'Perhatikan cara mendapatkannya.',e:'Undian berbayar mirip judi, sehingga hasilnya haram.',t:'Sebab'},
+{q:'Hal terpenting saat membeli makanan kemasan adalah ….',o:['memastikan logo halal resmi','memilih kemasan yang menarik','melihat harga saja','mengikuti iklan'],h:'Cari tanda dari BPJPH/MUI.',e:'Logo halal resmi menjamin produk sudah diperiksa.',t:'Penerapan'}];
+let Q;
+function runQ(bank,retry,done){Q={i:0,ok:0,bad:0,wr:[],t0:Date.now(),list:sh(bank).map(b=>({...b,o2:sh(b.o)}))};ask(retry,done)}
+function ask(retry,done){const b=Q.list[Q.i],L='ABCD';let tries=0;$('#app').innerHTML=`<div class="bar"><i style="width:${Q.i/Q.list.length*100}%"></i></div><p><b>Soal ${Q.i+1} / ${Q.list.length}</b></p><div class="card"><h3 style="color:var(--ink)">${b.q}</h3>${b.o2.map((o,k)=>`<button class="opt" data-o="${k}"><b>${L[k]}.</b> ${o}</button>`).join('')}<div id="fb"></div></div>`;
+document.querySelectorAll('.opt').forEach(btn=>btn.onclick=()=>{const o=b.o2[btn.dataset.o],ok=o==b.o[0],fb=$('#fb');tries++;
+if(ok){btn.classList.add('ok');btn.innerHTML+=' ✓';fin(true,'Benar! ')}
+else if(retry&&tries<2){btn.classList.add('bad');btn.disabled=true;btn.innerHTML+=' ✗';fb.innerHTML=`<div class="fb bad">Belum tepat. 💡 ${b.h} Coba lagi!</div>`}
+else{btn.classList.add('bad');btn.innerHTML+=' ✗';document.querySelectorAll('.opt').forEach(x=>{if(b.o2[x.dataset.o]==b.o[0]){x.classList.add('ok');x.innerHTML+=' ✓ (jawaban benar)'}});fin(false,'Belum benar. ')}
+function fin(ok,pre){document.querySelectorAll('.opt').forEach(x=>x.disabled=true);ok?(Q.ok++,S.pts+=10):(Q.bad++,Q.wr.push(b.t));save();fb.innerHTML=`<div class="fb ${ok?'ok':'bad'}">${pre}${b.e}</div><button class="btn" id="nx">${Q.i<Q.list.length-1?'Lanjut ▶':'Selesai 🏁'}</button>`;$('#nx').onclick=()=>{Q.i++;Q.i<Q.list.length?ask(retry,done):done()}}})}
+function lat(){S.seen.lat=1;$('#app').innerHTML=`<h2>📝 Latihan</h2><div class="card">${say('happy','Jangan takut salah! Kalau keliru, aku beri petunjuk dan kamu boleh mencoba lagi.')}<br><button class="btn" onclick="runQ(LB,true,()=>{S.seen.lat=2;save();$('#app').innerHTML='<div class=card style=text-align:center><h2>Latihan selesai! 🎉</h2><p>Benar: '+Q.ok+' dari '+Q.list.length+'</p><button class=btn onclick=go(\\'kuis\\')>Lanjut ke Kuis ❓</button></div>'})">▶ Mulai Latihan</button></div>`}
+function kuis(){S.seen.kuis=1;$('#app').innerHTML=`<h2>❓ Kuis Akhir</h2><div class="card">${say('think','10 soal, urutannya diacak. Setiap jawaban langsung kuberi pembahasan. Semangat!')}<br><button class="btn" onclick="runQ(KB,false,fin2)">▶ Mulai Kuis</button></div>`}
+function fin2(){const sc=Q.ok*10,w=Math.round((Date.now()-Q.t0)/1000);S.last={sc,ok:Q.ok,bad:Q.bad,w,wr:[...new Set(Q.wr)]};S.best=Math.max(S.best,sc);S.seen.hasil=1;save();go('hasil')}
+function hasil(){const L=S.last;if(!L){$('#app').innerHTML=`<h2>🏆 Hasil</h2><div class="card">${say('think','Kamu belum mengerjakan kuis. Yuk kerjakan dulu!')}<br><button class="btn" onclick="go('kuis')">Ke Kuis</button></div>`;return}
+const b=L.sc>=80?['🏅','Luar Biasa!','proud']:L.sc>=60?['🥈','Hebat!','happy']:['🌱','Tetap Semangat!','think'];
+$('#app').innerHTML=`<h2>🏆 Hasil Belajar</h2><div class="card" style="text-align:center"><div class="big">${b[0]}</div><h2>${b[1]}</h2><div class="stars">${'⭐'.repeat(L.sc>=80?3:L.sc>=60?2:1)}</div><p>Skor: <b>${L.sc}</b> / 100<br>✓ Benar: <b>${L.ok}</b> &nbsp; ✗ Salah: <b>${L.bad}</b><br>⏱ Waktu: <b>${L.w} detik</b> &nbsp; ⭐ Poin total: <b>${S.pts}</b></p>${say(b[2],L.wr.length?'Bagian yang perlu kamu ulang: <b>'+L.wr.join(', ')+'</b>.':'Semua bagian sudah kamu kuasai. Barakallah!')}</div><div class="card"><b>Ringkasan:</b> Halal = diizinkan, haram = dilarang. Dasar hukum: Al-Qur’an, Al-Hadis, Ijtihad. Sebab: zat asal, sifat asal, proses. Terapkan dalam sikap, perilaku, dan konsumsi.</div><div class="row"><button class="btn alt" onclick="mi=0;go('materi')">📖 Ulangi Materi</button><button class="btn" onclick="go('kuis')">🔁 Ulangi Kuis</button><button class="btn alt" onclick="go('ref')">💭 Refleksi</button></div>`}
+let rf={e:'',s:0};
+function ref(){S.seen.ref=1;$('#app').innerHTML=`<h2>💭 Refleksi</h2><div class="card"><b>Bagaimana perasaanmu setelah belajar?</b><div class="row" id="em">${['😄','🙂','😐','😕'].map(e=>`<button class="emo" onclick="rf.e='${e}';mark(this)">${e}</button>`).join('')}</div><p><b>Seberapa paham kamu? (bintang)</b></p><div class="row" id="st">${[1,2,3,4,5].map(n=>`<button class="emo" onclick="rf.s=${n};stars()">⭐</button>`).join('')}</div><p><b>Apa yang paling kamu sukai? Bagian mana yang masih sulit? Apa yang ingin kamu pelajari lagi?</b></p><textarea id="rt" placeholder="Tulis singkat di sini…"></textarea><br><button class="btn" onclick="rdone()">Kirim Refleksi</button></div><div id="rm"></div>`}
+function mark(b){document.querySelectorAll('#em .emo').forEach(x=>x.classList.remove('on'));b.classList.add('on')}
+function stars(){document.querySelectorAll('#st .emo').forEach((x,i)=>x.classList.toggle('on',i<rf.s))}
+function rdone(){const low=rf.s&&rf.s<=2||rf.e=='😕';$('#rm').innerHTML=`<div class="card">${say(low?'think':'proud',low?'Tidak apa-apa kalau masih sulit. Belajar itu proses. Baca ulang materinya pelan-pelan, aku temani!':'Masyaallah, semangat belajarmu hebat! Terapkan ilmu ini setiap hari: pilih yang halal, jauhi yang haram.')}<p style="text-align:center"><b>Barakallahu fiikum! 🤲</b><br>Media dibuat oleh M. Ripani, S.Pd • 2026</p><div class="row"><button class="btn" onclick="mi=0;go('materi')">🔁 Ulangi Media</button><button class="btn alt" onclick="go('home')">Kembali ke Menu</button></div></div>`;S.seen.ref=1;save()}
+function help(){$('#app').innerHTML=`<h2>📋 Petunjuk</h2><div class="card"><ol><li>Tekan <b>MULAI</b>, lalu baca <b>Materi</b> dengan tombol Lanjut/Kembali.</li><li><b>Aktivitas:</b> ketuk kartu lalu ketuk kotak tujuan (atau seret di komputer).</li><li><b>Game:</b> jawab Halal/Haram secepatnya dalam 45 detik.</li><li><b>Latihan:</b> boleh mencoba lagi dengan petunjuk.</li><li><b>Kuis:</b> 10 soal acak, skor otomatis, lalu lihat <b>Hasil</b>.</li><li>Isi <b>Refleksi</b> di akhir. Progresmu tersimpan otomatis.</li></ol><button class="btn alt" onclick="S={pts:0,best:0,seen:{}};save();go('cover')">🗑 Hapus Progres</button></div>`}
+go('cover');
+</script></body></html>
